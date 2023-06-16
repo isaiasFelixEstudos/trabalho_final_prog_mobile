@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_final/funcoes/api_receitas.dart';
 
 class HomeApp extends StatefulWidget {
   const HomeApp({super.key});
@@ -8,14 +9,30 @@ class HomeApp extends StatefulWidget {
 }
 
 class _HomeAppState extends State<HomeApp> {
+  List<dynamic> categories = [];
+  void initState() {
+    super.initState();
+    fetchMealCategories().then((result) {
+      setState(() {
+        categories = result;
+      });
+    }).catchError((error) {
+      print('Erro ao carregar as categorias de receitas: $error');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Text('Receitas'),
-        ],
-      ),
+    return ListView.builder(
+      itemCount: categories.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Card(
+          child: ListTile(
+            title: Text(categories[index]['strCategory']),
+            leading: Image.network(categories[index]['strCategoryThumb']),
+          ),
+        );
+      },
     );
   }
 }

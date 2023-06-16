@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:projeto_final/app/paginas/login.dart';
+
+import 'package:projeto_final/app/paginas/pesquisarreceita.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -35,10 +36,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         GestureDetector(
           onTap: () {
-            Get.off(Login());
+            Get.off(RecipeSearch());
           },
-          child: Icon(Icons.logout),
-        )
+          child: Icon(Icons.search),
+        ),
       ],
     );
   }
