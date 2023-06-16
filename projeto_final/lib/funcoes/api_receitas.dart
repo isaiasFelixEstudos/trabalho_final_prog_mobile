@@ -12,6 +12,17 @@ Future<List<dynamic>> fetchMealCategories() async {
   }
 }
 
+Future<List<dynamic>> fetchRecipesByCategory(String category) async {
+  final response = await http.get(Uri.parse(
+      'https://www.themealdb.com/api/json/v1/1/filter.php?c=$category'));
+  if (response.statusCode == 200) {
+    final data = jsonDecode(response.body);
+    return data['meals'];
+  } else {
+    throw Exception('Falha ao carregar as receitas da categoria $category');
+  }
+}
+
 class RecipeApi {
   static Future<List<dynamic>> searchRecipes(String term) async {
     final response = await http.get(Uri.parse(

@@ -67,18 +67,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
           Card(
             child: ListTile(
               leading: Icon(
-                Icons.bookmark_add,
-                color: Colors.red,
-              ),
-              title: Text('Cadastrar Receita'),
-              onTap: () {
-                Navigator.of(context).pushNamed('/cadreceita');
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Icon(
                 Icons.logout_rounded,
                 color: Colors.red,
               ),

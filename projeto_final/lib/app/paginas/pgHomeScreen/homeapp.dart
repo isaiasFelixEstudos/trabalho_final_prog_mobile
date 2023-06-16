@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
+import 'package:projeto_final/app/paginasauxiliar/estruturaListaReceitas.dart';
 
 class HomeApp extends StatefulWidget {
-  const HomeApp({super.key});
+  const HomeApp({Key? key});
 
   @override
   State<HomeApp> createState() => _HomeAppState();
@@ -10,6 +11,7 @@ class HomeApp extends StatefulWidget {
 
 class _HomeAppState extends State<HomeApp> {
   List<dynamic> categories = [];
+
   void initState() {
     super.initState();
     fetchMealCategories().then((result) {
@@ -30,6 +32,15 @@ class _HomeAppState extends State<HomeApp> {
           child: ListTile(
             title: Text(categories[index]['strCategory']),
             leading: Image.network(categories[index]['strCategoryThumb']),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      RecipesPage(category: categories[index]['strCategory']),
+                ),
+              );
+            },
           ),
         );
       },
