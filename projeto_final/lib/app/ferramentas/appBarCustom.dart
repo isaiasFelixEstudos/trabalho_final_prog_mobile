@@ -13,15 +13,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.red,
       title: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.food_bank),
+            Icon(
+              Icons.food_bank_rounded,
+              color: Colors.black,
+            ),
             SizedBox(width: 8),
             Text(title),
             SizedBox(width: 8),
-            Icon(Icons.food_bank),
+            Icon(
+              Icons.food_bank_rounded,
+              color: Colors.black,
+            ),
           ],
         ),
       ),

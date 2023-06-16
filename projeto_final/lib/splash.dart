@@ -25,9 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            FlutterLogo(
+            Icon(
+              Icons.food_bank_rounded,
               size: 200,
-            )
+            ),
           ],
         ),
       ),

@@ -30,7 +30,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
           ),*/
           Card(
             child: ListTile(
-              leading: Icon(Icons.home),
+              leading: Icon(
+                Icons.home,
+                color: Colors.red,
+              ),
               title: Text('Home'),
               onTap: () {
                 Get.back(result: '/home');
@@ -39,10 +42,25 @@ class _CustomDrawerState extends State<CustomDrawer> {
           ),
           Card(
             child: ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(
+                Icons.person,
+                color: Colors.red,
+              ),
               title: Text('Perfil'),
               onTap: () {
-                Get.back(result: '/areuser');
+                Get.toNamed('/areuser');
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.bookmark_add,
+                color: Colors.red,
+              ),
+              title: Text('Cadastrar Receita'),
+              onTap: () {
+                Get.toNamed('/cadreceita');
               },
             ),
           ),
