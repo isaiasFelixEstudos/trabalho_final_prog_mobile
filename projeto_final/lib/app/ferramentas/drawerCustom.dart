@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 //import 'package:get/get.dart';
-import 'package:get/get.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -36,7 +35,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               title: Text('Home'),
               onTap: () {
-                Get.back(result: '/home');
+                Navigator.of(context).pushNamed('/home');
               },
             ),
           ),
@@ -48,7 +47,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               title: Text('Perfil'),
               onTap: () {
-                Get.toNamed('/areuser');
+                Navigator.of(context).pushNamed('/areuser');
               },
             ),
           ),
@@ -60,7 +59,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               title: Text('Cadastrar Receita'),
               onTap: () {
-                Get.toNamed('/cadreceita');
+                Navigator.of(context).pushNamed('/cadreceita');
               },
             ),
           ),
