@@ -78,7 +78,6 @@ class _TelaDeLoginState extends State<TelaDeLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text('Login'))),
       body: Column(
         children: [
           Padding(

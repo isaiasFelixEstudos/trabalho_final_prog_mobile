@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 //import 'dart:async';
-import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
-import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
 
 class EstruturaUpdateCadUser extends StatefulWidget {
   const EstruturaUpdateCadUser({super.key});
@@ -56,8 +54,6 @@ class _EstruturaUpdateCadUserState extends State<EstruturaUpdateCadUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Perfil Usuário'),
-      drawer: CustomDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
