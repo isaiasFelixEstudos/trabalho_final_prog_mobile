@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
-import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
 
 class RecipeSearch extends StatefulWidget {
@@ -51,8 +49,6 @@ class _RecipeSearchState extends State<RecipeSearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Pesquisar receita'),
-      drawer: CustomDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
