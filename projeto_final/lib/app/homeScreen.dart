@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
 import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
 import 'package:projeto_final/app/paginas/pgHomeScreen/homeapp.dart';
+import 'package:projeto_final/app/paginas/pgHomeScreen/favoritosapp.dart';
+import 'package:projeto_final/app/paginas/pgHomeScreen/naofavoritosapp.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
         index: _paginaSelecionada,
         children: [
           HomeApp(),
-          //AddGenero(),
-          //AddLivro(),
+          FavoritosApp(),
+          NaoFavoritosApp(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

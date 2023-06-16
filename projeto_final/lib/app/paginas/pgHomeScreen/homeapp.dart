@@ -13,7 +13,7 @@ class _HomeAppState extends State<HomeApp> {
     return Scaffold(
       body: Column(
         children: [
-          Text('Olá'),
+          Text('Receitas'),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:get/get.dart';
+import 'package:get/get.dart';
+import 'package:projeto_final/app/paginas/login.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -54,12 +55,36 @@ class _CustomDrawerState extends State<CustomDrawer> {
           Card(
             child: ListTile(
               leading: Icon(
+                Icons.account_circle_rounded,
+                color: Colors.red,
+              ),
+              title: Text('Cadastrar Usuário'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/cadreceita');
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
                 Icons.bookmark_add,
                 color: Colors.red,
               ),
               title: Text('Cadastrar Receita'),
               onTap: () {
                 Navigator.of(context).pushNamed('/cadreceita');
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Icon(
+                Icons.logout_rounded,
+                color: Colors.red,
+              ),
+              title: Text('Sair'),
+              onTap: () {
+                Get.off(Login());
               },
             ),
           ),
