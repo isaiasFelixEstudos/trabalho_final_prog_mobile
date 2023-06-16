@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 /* paginas */
-import 'splash.dart';
+//import 'splash.dart';
 import 'app/paginas/perfiluser.dart';
 import 'app/homeScreen.dart';
 /* paginas */

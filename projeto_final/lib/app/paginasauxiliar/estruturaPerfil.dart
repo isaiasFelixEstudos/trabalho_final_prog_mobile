@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
+//import 'dart:async';
 import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
 import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
 
