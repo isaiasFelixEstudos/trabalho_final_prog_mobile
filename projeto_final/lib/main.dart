@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 
 /* paginas */
 import 'splash.dart';
-import 'app/paginas/perfiluser.dart';
-import 'app/homeScreen.dart';
-import 'app/paginas/culinaria.dart';
+import 'paginas/perfiluser.dart';
+import 'homeScreen.dart';
+import 'paginas/culinaria.dart';
 /* paginas */
 
 void main() {

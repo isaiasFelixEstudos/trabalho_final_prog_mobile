@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
-import 'package:projeto_final/app/paginas/recipes.dart';
+import 'package:projeto_final/paginas/recipes.dart';
 
 class HomeApp extends StatefulWidget {
   const HomeApp({Key? key});

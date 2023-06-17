@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
-import 'package:projeto_final/app/paginas/receita.dart';
+import 'package:projeto_final/paginas/receita.dart';
 
 class RecipeSearch extends StatefulWidget {
   const RecipeSearch({Key? key}) : super(key: key);

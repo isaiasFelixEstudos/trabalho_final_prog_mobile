@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_final/app/paginasauxiliar/estruturaLogin.dart';
+import 'package:projeto_final/paginasauxiliar/estruturaLogin.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

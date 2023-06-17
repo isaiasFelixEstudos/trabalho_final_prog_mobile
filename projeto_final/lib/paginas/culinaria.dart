@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
-import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
-import 'package:projeto_final/app/paginasauxiliar/estruturaCulianria.dart';
+import 'package:projeto_final/custom/appBarCustom.dart';
+import 'package:projeto_final/custom/drawerCustom.dart';
+import 'package:projeto_final/paginasauxiliar/estruturaCulianria.dart';
 
 class PaginaCulianria extends StatefulWidget {
   const PaginaCulianria({super.key});

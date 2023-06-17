@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
-import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
+import 'package:projeto_final/custom/appBarCustom.dart';
+import 'package:projeto_final/custom/drawerCustom.dart';
 
 class RecipePage extends StatefulWidget {
   final Map<String, dynamic> meal;

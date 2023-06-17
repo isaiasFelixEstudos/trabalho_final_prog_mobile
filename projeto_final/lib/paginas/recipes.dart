@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
-import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
+import 'package:projeto_final/custom/appBarCustom.dart';
+import 'package:projeto_final/custom/drawerCustom.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
-import 'package:projeto_final/app/paginas/receita.dart';
+import 'package:projeto_final/paginas/receita.dart';
 
 class RecipesPage extends StatefulWidget {
   final String category;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:projeto_final/app/paginas/login.dart';
+import 'package:projeto_final/paginas/login.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -15,19 +15,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
     return Drawer(
       child: ListView(
         children: [
-          /*
-          UserAccountsDrawerHeader(
-            accountName: Text(controllUser.user?.displayName ?? ''),
-            accountEmail: Text(controllUser.user?.email ?? ''),
-            currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.black,
-              child: Text(
-                  controllUser.user?.email?.isNotEmpty == true
-                      ? controllUser.user!.email![0]
-                      : 'N',
-                  style: TextStyle(fontSize: 40.0)),
-            ),
-          ),*/
           Card(
             child: ListTile(
               leading: Icon(
@@ -60,7 +47,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
               title: Text('Cadastrar Usuário'),
               onTap: () {
-                Navigator.of(context).pushNamed('/cadreceita');
+                Navigator.of(context).pushNamed('/cadusuario');
               },
             ),
           ),
