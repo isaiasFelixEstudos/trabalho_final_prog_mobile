@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto_final/app/ferramentas/appBarCustom.dart';
 import 'package:projeto_final/app/ferramentas/drawerCustom.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
+import 'package:projeto_final/app/paginas/receita.dart';
 
 class RecipesPage extends StatefulWidget {
   final String category;
@@ -46,6 +47,14 @@ class _RecipesPageState extends State<RecipesPage> {
                   child: ListTile(
                     title: Text(meal['strMeal']),
                     leading: Image.network(meal['strMealThumb']),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RecipePage(meal: meal),
+                        ),
+                      );
+                    },
                   ),
                 );
               },

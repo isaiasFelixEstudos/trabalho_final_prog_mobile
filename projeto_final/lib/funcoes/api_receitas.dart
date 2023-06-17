@@ -1,5 +1,24 @@
-import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+Future<Map<String, dynamic>> fetchRecipe(String mealId) async {
+  try {
+    final response = await http.get(
+      Uri.parse('https://www.themealdb.com/api/json/v1/1/lookup.php?i=$mealId'),
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final recipeData = data['meals'][0];
+      return recipeData;
+    } else {
+      throw Exception('Falha na pesquisa por ID');
+    }
+  } catch (error) {
+    print('Error: $error');
+    throw error;
+  }
+}
 
 Future<List<dynamic>> fetchMealCategories() async {
   final response = await http
@@ -8,7 +27,7 @@ Future<List<dynamic>> fetchMealCategories() async {
     final data = jsonDecode(response.body);
     return data['categories'];
   } else {
-    throw Exception('Falha ao carregar as categorias de receitas');
+    throw Exception('deu erro ao carregar as categorias de receitas');
   }
 }
 
@@ -36,7 +55,7 @@ class RecipeApi {
         return [];
       }
     } else {
-      print('Request failed with status: ${response.statusCode}.');
+      print('Status de falha: ${response.statusCode}.');
       return [];
     }
   }
