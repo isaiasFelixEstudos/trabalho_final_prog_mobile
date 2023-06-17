@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_final/funcoes/api_receitas.dart';
+import 'package:projeto_final/app/paginas/receita.dart';
 
 class RecipeSearch extends StatefulWidget {
   const RecipeSearch({Key? key}) : super(key: key);
@@ -88,12 +89,20 @@ class _RecipeSearchState extends State<RecipeSearch> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text(searchResults[index]['strMeal']),
-                      subtitle: Text(searchResults[index]['strCategory']),
-                      leading: Image.network(
-                        searchResults[index]['strMealThumb'],
-                      ),
-                    ),
+                        title: Text(searchResults[index]['strMeal']),
+                        subtitle: Text(searchResults[index]['strCategory']),
+                        leading: Image.network(
+                          searchResults[index]['strMealThumb'],
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  RecipePage(meal: searchResults[index]),
+                            ),
+                          );
+                        }),
                   );
                 },
               ),

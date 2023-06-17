@@ -60,3 +60,20 @@ class RecipeApi {
     }
   }
 }
+
+class CuisineService {
+  static Future<List<String>> fetchCuisines() async {
+    final response = await http.get(
+      Uri.parse('https://www.themealdb.com/api/json/v1/1/list.php?a=list'),
+    );
+
+    if (response.statusCode == 200) {
+      final data = jsonDecode(response.body);
+      final meals = data['meals'] as List<dynamic>;
+      final cuisines = meals.map((meal) => meal['strArea'] as String).toList();
+      return cuisines;
+    } else {
+      throw Exception('Error fetching cuisines');
+    }
+  }
+}
